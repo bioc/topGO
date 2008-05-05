@@ -32,7 +32,6 @@
 \begin{document}
 \maketitle
 
-\newpage
 \tableofcontents
 \newpage
 
@@ -42,35 +41,7 @@ options(width = 70)
 
 \section{Introduction}
 
-The result of a microarray experiment is a list of genes with corresponding expression profiles.
-Such a gene list is the starting point for an investigation of the biology manifested by the
-experimental data. Often, genes are ranked according to differential expression between disease groups
-or according to correlation of expression values with a phenotype measurement. The result of such an
-analysis is an ordered~list~of~genes.
 
-Methods that test for enrichment of GO terms have been proposed by~\cite{Draghici03}, \cite{Zeenerg03} and 
-\cite{Al-Shhrour04}. A comparative study of commonly used tools for analyzing GO term
-enrichment was recently presented by \cite{Khatri05}. None of the methods compared in this study integrates
-the knowledge encapsulated in the hierarchical structure of the GO database. Recently \cite{Gross06}
-discussed scoring enrichment of GO terms in a local sense. The over-representation of a GO term is quantified
-with respect to its direct less specific neighbors in the GO hierarchy. In the present paper we propose
-algorithms that identify over-represented terms in a more global sense, integrating the whole GO topology
-in the score.
-
-Several other methods integrating the hierarchical structure of the GO have related but different goals.
-\cite{Balasub04} test the association between multiple sources of functional genomics data.
-Each data source is represented by a single graph with nodes representing genes and with edges representing
-functional links. For a group of genes a graph based on GO is obtained by placing edges between all gene
-pairs that are annotated to GO terms with a small distance in GO graph topology.
-The proposed tests statistically compare the occurrence of edges observed in different graphs.
-\cite{Joslyn04} define distances between nodes in the GO graph for ordering GO terms with respect to a
-group of genes. A GO term is considered more important if many genes in the group are annotated to GO terms
-close in graph topology. The resulting rank-ordered list of GO terms is then clustered in order to identify
-summarizing nodes for the characteristics of the gene group.
-
-
-
-%% the end of introduction .....
 {\tt topGO} package provides a set of classes and methods which allows the user to run 
 the mentioned algorithms/methods.
 Moreover the user can use the current framework to develop and test new enrichment algorithms 
@@ -113,25 +84,6 @@ f2 <- function(x) (IQR(x) > 0.5)
 ff <- filterfun(f1, f2)
 eset <- ALL[genefilter(ALL, ff), ]
 @ 
-
-
-
-\section{Sample session}
-
-This section provides a quick start in performing an enrichment analysis. Details about the used 
-functions will be presented in the following section.
-
-Lets assume we want to test enrichment of GO terms with differentially expressed genes. The first 
-step is to 
-\subsection{Deciding on the test}
-
-get gene
-\subsection{Setting the annotations}
-
-\subsection{Running an algorithm}
-
-\subsection{Looking at the results}
-
 
 
 
