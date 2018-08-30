@@ -110,15 +110,17 @@ If you have already installed Bioconductor packages on your system then you can 
 below.
 
 <<eval = FALSE>>=
-source("http://bioconductor.org/biocLite.R")
-biocLite()
+if (!requireNamespace("BiocManager", quietly=TRUE))
+    install.packages("BiocManager")
+BiocManager::install()
 @ 
 
 Once the core Bioconductor packages are installed, we can install the {\tt topGO} package by
 
 <<eval = FALSE>>=
-source("http://bioconductor.org/biocLite.R")
-biocLite("topGO")
+if (!requireNamespace("BiocManager", quietly=TRUE))
+    install.packages("BiocManager")
+BiocManager::install("topGO")
 @ 
 
 \clearpage
