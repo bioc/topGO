@@ -1,7 +1,7 @@
 Package: topGO
 Type: Package
 Title: Enrichment Analysis for Gene Ontology
-Version: 2.61.1
+Version: 2.62.0
 Date: 2025-06-23
 Authors@R: 
   c(
